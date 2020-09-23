@@ -1,7 +1,7 @@
 // Restart Game Button
 var restart = document.querySelector('#b');
 
-// Grab all the squares
+// Grabs all the squares
 var squares = document.querySelectorAll("td");
 
 
@@ -17,7 +17,7 @@ restart.addEventListener('click',clearBoard)
 
 
 
-// Create a function that will check the square marker
+// Changes the symbol of the pressed area
 function changeMarker(){
     if(this.textContent === ''){
       this.textContent = 'X';
@@ -29,7 +29,7 @@ function changeMarker(){
     }
 };
 
-// Use a for loop to add Event listeners to all the squares
+// Adds event listeners to all of the squares
 for (var i = 0; i < squares.length; i++) {
     squares[i].addEventListener('click', changeMarker);
 }
